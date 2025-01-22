@@ -1,7 +1,7 @@
 import {MongoClient, ObjectId} from 'mongodb';
 import dotenv from 'dotenv';
 dotenv.config();
-const mongoClient = new MongoClient("mongodb+srv://phen:1510@bate-papo.pm6kj.mongodb.net/?retryWrites=true&w=majority&appName=bate-papo");
+const mongoClient = new MongoClient(process.env.MONGO_URI);
 let db
 
 await mongoClient.connect();

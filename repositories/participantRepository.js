@@ -8,7 +8,12 @@ async function createParticipant(participant){
      return await db.collection('participants').insertOne(participant);
 }
 
+async function getAllParticipants(){
+    return await db.collection("participants").find().toArray();
+}
+
 export {
     getParticipantByName,
-    createParticipant
+    createParticipant,
+    getAllParticipants
 }

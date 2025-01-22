@@ -6,5 +6,6 @@ import { schemas } from "../schemas/schemas.js";
 const participantRouter = Router();
 
 participantRouter.post("/participants", schemaValidator(schemas.participantSchema), participantController.createParticipant);
+participantRouter.get("/participants")
 
 export default participantRouter;

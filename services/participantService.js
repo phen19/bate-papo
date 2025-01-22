@@ -9,6 +9,11 @@ async function createParticipant(participant){
     await participantRepository.createParticipant(participant);
 }
 
+async function getAllParticipants() {
+    return await participantRepository.getAllParticipants();
+}
+
 export{
-    createParticipant
+    createParticipant,
+    getAllParticipants
 }
